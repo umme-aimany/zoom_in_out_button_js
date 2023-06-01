@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zoomin _zoomout_button</title>
+</head>
+<body>
+    <h1>
+        ZOOM IN ZOOM OUT BUTTON
+    </h1>
+     <p id="text" style="font-size: 16px;color: white;">This is a paragraph.Aiamn khan i am 17 yeaqrs old. Click the buttons below to zoom in or zoom out Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor reprehenderit omnis maiores aspernatur libero debitis voluptas soluta amet cupiditate accusantium quam nobis blanditiis quisquam totam, labore eligendi accusamus deserunt expedita!.</p>
+
+    <button onclick="zoomIn()">Zoom In (+)</button>
+    <button onclick="zoomOut()">Zoom Out (-)</button>
+    
+    <script>
+      function zoomIn() {
+        var text = document.getElementById("text");
+        var currentSize = parseInt(window.getComputedStyle(text).fontSize);
+        text.style.fontSize = (currentSize + 10) + "px";
+      }
+    
+      function zoomOut() {
+        var text = document.getElementById("text");
+        var currentSize = parseInt(window.getComputedStyle(text).fontSize);
+        text.style.fontSize = (currentSize - 10) + "px";
+      }
+    </script>
+    
+</body>
+</html>
